@@ -19,6 +19,7 @@ foreach($files as $file) {
     $fileContentsArray = explode("\n", $fileContents);
     foreach($fileContentsArray as $lineNumber => $row) {
         if(strpos($row, $string) !== false) {
+            $lineNumber++;
             $row = trim($row);
             echo "$file:$lineNumber\n\t\t\t$row\n\n";
         }
